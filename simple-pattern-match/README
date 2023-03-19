@@ -1,0 +1,43 @@
+In this bite, you'll test-drive Python pattern-matching feature,
+which arrived in Python 3.10!
+
+Python pattern-matching you write a match statement
+to choose whichever case matches the arguments you pass,
+like this:
+
+def how_many_args(cmd_and_args)
+	match cmd_and_args:
+		case ["FOO"]:
+			print(f"passed 'FOO', with no args")
+		case ["FOO", bar]:
+			print(f"passed 'FOO {bar}'")
+		case ["BAZ", mumble, frabitz]:
+			print(f"passed 'BAZ {mumble} {frabitz}'")
+		case _:
+			print(f"unknown command: {cmd[0]}"
+		
+Python tests your arguments against its patterns,
+choosing the first one that matches.
+
+In this bite, you'll write a function that greets a list of people,
+like this:
+
+>>> greet(["Thing_1"])
+"Hello, Thing_1"
+>>> greet(["Thing_1", "Thing_2"])
+"Hello, Thing1 and Thing_2
+>>> greet(["Thing_1", "Thing_2", "Cat_in_the_Hat"]
+"Hello, Thing_1, Thing_2, and Cat_in_the_Hat"
+
+For mystery arguments, print "I don't know how to greet <args>!"
+
+>>> greet("Dr. Seuss")
+"I don't know how to greet Dr. Seuss!"
+>>> greet(13)
+"I don't know how to greet 13!"
+
+
+If the names in the list aren't title-cased, you'll want to do that.
+
+>>> greet(["thing_1"]
+"Hello, Thing_1"
