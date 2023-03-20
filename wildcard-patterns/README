@@ -1,0 +1,20 @@
+Time to try out pattern wildcarding!
+If the subject being matched matches the pattern [(first, last), *info],
+then info will capture all elements of the array after the first and last name.
+For example, if you match [("Bob", "Belderbos"), "Pybite", "wrangler"] against the pattern [(first, last), *info]
+then first == "Bob", last = "Belderbos" and info = ["Pybite", "wrangler"]
+
+In this bite, you'll scan the file musicians.txt, with lines like this:
+
+	Ron Sommers: guitar, fiddle: Grouchy Geezers, Junkyard Dogs
+
+which says Ron Sommers plays guitar and fiddle, and has been in the bands "Grouchy Geezers" and "Junkyard Dogs" with me.
+
+You'll print any lines that don't have colons, unchanged.
+For anyone who plays more than three instruments, print
+	"Paul plays more instruments than humanly possible."
+For anyone who's been in more than two bands with me, print
+	"Playing with George is habit-forming."
+("John" and "George" are first names.)
+Raise a ValueError for any musicians like Prince that don't have a last name.
+
