@@ -1,6 +1,6 @@
 import pytest
 
-from match import *
+from match import greet
 
 
 def test_1_arg():
